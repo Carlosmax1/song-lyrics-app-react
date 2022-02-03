@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500&display=swap');
+
+.songs-container{
+    margin: 1em 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.songs{
+    display: flex;
+    padding: 1em;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    width: 600px;
+    height: 20px;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 400;
+    /* border-bottom: solid 1px black; */
+    background: rgba(211, 211, 211, 0.158);
+}
+
+.botao-letra{
+    padding: 0.9em;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+    background: #05D9DD;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 400;
+    font-size: 10pt;
+}

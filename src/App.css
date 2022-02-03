@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.cabecalho{
+    background-image: url('./assets/img/music-player.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 180px;
+}
+
+.titulo{
+    margin-bottom: 1em;
+    margin-left: 1.9em;
+    text-align: center;
+    font-family: 'Fira Sans', sans-serif;
+    color: #999898;
+    font-weight: 500;
+}
+
+.input-artista-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 100px;
+}
+
+.input-artista{
+    border: none;
+    outline: none;
+    padding: 1em;
+    width: 600px;
+    font-family: 'Fira Sans', sans-serif;
+    border-radius: 100px;
+    background: #ffffff5d;
+}
+
+/* .botao{
+    cursor: pointer;
+    border: none;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 400;
+    padding: 0.8em;
+    border-radius: 100px;
+    width: 140px;
+    transform: translate(-150px, 0);
+    background: #05D9DD;
+    color: black;
+}
+
+.botao:hover{
+    background: #05c7ca;
+} */
