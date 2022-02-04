@@ -20,7 +20,7 @@
     font-family: 'Fira Sans', sans-serif;
     font-weight: 400;
     /* border-bottom: solid 1px black; */
-    background: rgba(211, 211, 211, 0.158);
+    /* background: #1683b565; */
 }
 
 .botao-letra{
@@ -28,7 +28,7 @@
     border: none;
     cursor: pointer;
     border-radius: 15px;
-    background: #05D9DD;
+    background: #b44a58;
     font-family: 'Fira Sans', sans-serif;
     font-weight: 400;
     font-size: 10pt;
