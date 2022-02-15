@@ -1,12 +1,16 @@
 import react from "react";
 import { useEffect, useState } from "react";
 import apiClient from "../../config/http";
+import Modal from 'react-modal';
 import './index.css';
+
+Modal.setAppElement('#root');
 
 export default function SongList({ songsList }) {
 
 	const [key, setKey] = useState(null);
 	const [lyrics, setLyrics] = useState(null);
+	const [modalIsOpen, setIsOpen] = useState(false);
 
 	const getLyric = async (songsList, key) => {
 		const res = apiClient.get(`v1/${songsList[key].artist.name}/${songsList[key].title}`)
@@ -19,9 +23,12 @@ export default function SongList({ songsList }) {
 			setLyrics(list);
 		}
 		lyrics();
-	}, [key, songsList])
+		setIsOpen(true);
+	}, [key, songsList]);
 
-	console.log(lyrics);
+	const closeModal = () => {
+		setIsOpen(false);
+	}
 
 	return (
 		<>
@@ -33,9 +40,16 @@ export default function SongList({ songsList }) {
 				))}
 				{lyrics !== null && (
 					<>
-						<div className="letra-container">
-						<span className="letra">{lyrics.data.lyrics}</span>
-						</div>
+						<Modal
+							isOpen={modalIsOpen}
+							onRequestClose={closeModal}
+						>
+							<div className="letra-container">
+								<span className="letra">{lyrics.data.lyrics}</span>
+								<button onClick={() => closeModal()}>Fechar</button>
+							</div>
+						</Modal>
+
 					</>
 				)}
 

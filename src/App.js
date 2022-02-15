@@ -3,7 +3,7 @@ import getSongs from './songs';
 import SongList from './components/SongList';
 import MsgPesquisar from './components/MsgPesquisar';
 import { useEffect, useState } from 'react';
-import './App.css'
+import './App.css';
 
 function App() {
 
